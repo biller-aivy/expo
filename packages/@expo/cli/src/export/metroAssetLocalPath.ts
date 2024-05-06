@@ -115,7 +115,7 @@ function getAndroidResourceFolderName(asset: Pick<AssetData, 'type'>, scale: num
 
 function getResourceIdentifier(asset: Pick<AssetData, 'httpServerLocation' | 'name'>): string {
   const folderPath = getBaseUrl(asset);
-  return `${folderPath}/${asset.name}`
+  return `/${asset.name}`
     .toLowerCase()
     .replace(/\//g, '_') // Encode folder structure in file name
     .replace(/([^a-z0-9_])/g, '') // Remove illegal chars
